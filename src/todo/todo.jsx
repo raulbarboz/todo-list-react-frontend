@@ -11,7 +11,7 @@ export default class Todo extends Component {
   constructor(props){
     super(props)
     this.state = {description: '', list: [] }
-    
+
     this.handleChange = this.handleChange.bind(this)
     this.handleAdd = this.handleAdd.bind(this)
   }
@@ -19,26 +19,14 @@ export default class Todo extends Component {
   handleChange(e){
     this.setState({...this.state, description: e.target.value})
   }
-  
+
   handleAdd() {
-    const config = {
-      method: 'post',
-      url: 'https://raulbarboz-react-backend.herokuapp.com/api/todos/',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Access-Control-Allow_Origin': '*',
-        'Access-Control-Allow-Headers': 'X-Requested-With'
-      },
-      responseType: 'json',
-      withCredentials: false,
-    }
-    
-    
+
     const description = this.state.description;
     axios.post(URL, { description })
       .then(resp => console.log('funcionou'))
   }
-  
+
   render(){
     return(
       <div>

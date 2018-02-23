@@ -8,8 +8,8 @@ module.exports = {
     filename: './app.js'
   },
   devServer: {
-    port: process.env.PORT || '80',
-    host: process.env.IP || '0.0.0.0',
+    port: process.env.PORT || '8080',
+    //host: process.env.IP || '0.0.0.0',
     compress: true,
     disableHostCheck: true,
     contentBase: './public',
