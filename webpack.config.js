@@ -9,7 +9,7 @@ module.exports = {
   },
   devServer: {
     port: process.env.PORT || '8080',
-    //host: process.env.IP || '0.0.0.0',
+    host: process.env.IP || '0.0.0.0',
     compress: true,
     disableHostCheck: true,
     contentBase: './public',
